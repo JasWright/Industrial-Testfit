@@ -141,11 +141,18 @@
     <Compile Include="CreateRadialAndArcGridsForm.Designer.cs">
       <DependentUpon>CreateRadialAndArcGridsForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="pyRevitStudy.xaml.cs">
+      <DependentUpon>pyRevitStudy.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Unit.cs" />
     <Compile Include="Validation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="GridCreationDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pyRevitStudy.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
