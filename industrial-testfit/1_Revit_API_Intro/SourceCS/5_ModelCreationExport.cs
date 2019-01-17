@@ -370,6 +370,7 @@ namespace IntroCs
             XYZ pt2 = locCurve.Curve.GetEndPoint(1);
             // Calculate the mid point. 
             XYZ pt = (pt1 + pt2) / 2.0;
+            // [ JAS JAN 17 2019 ] add ReferencePointArray to collect points that evenly divide the wall lines
 
             // One more thing - we want to set the reference as a bottom of the wall or level1. 
             ElementId idLevel1 = hostWall.get_Parameter(BuiltInParameter.WALL_BASE_CONSTRAINT).AsElementId();
