@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -168,16 +169,104 @@ namespace GridCreation.DATA
         #region methods
         /* Constructor */
         #region constructor
+        public CreateOrthogonalGridsData(
+            UIApplication app, 
+            DisplayUnitType dut, 
+            ArrayList labels):
+            base(app, labels, dut)
+        {
+
+        }
         #endregion
 
         /* Create Grids*/
         #region create grids
+        public void CreateGrids()
+        {
+            ArrayList failureReasons = new ArrayList();
+            
+        }
         #endregion
+
         /* Create Horizontal Grids*/
         #region horizontal grids
+        private int CreateXGrids(ref ArrayList failureReasons)
+        {
+            int errorCount = 0;
+
+            // Curve array which stores all Curves for batch creation
+            CurveArray curves = new CurveArray();
+
+            for (int i = 0; i < m_xNumber; ++i)
+            {
+                XYZ startpt;
+                XYZ endpt;
+                Line line;
+
+                try
+                {
+                    if (m_yNumber != 0)
+                    {
+                        // Grids will have an extension distance of m_ySpaceing /2
+                        startpt = new XYZ(
+                            m_xOrigin - m_ySpacing / 2,
+                            m_yOrigin + i * m_xSpacing,
+                            0);
+                        endpt = new XYZ(
+                            m_xOrigin + (m_yNumber - 1) * m_ySpacing + m_ySpacing / 2,
+                            m_yOrigin + i * m_xSpacing,
+                            0);
+                    }
+                    else
+                    {
+                        startpt = new XYZ(m_xOrigin, m_yOrigin + i * m_xSpacing, 0);
+                        endpt = new XYZ(m_xOrigin + m_xSpacing / 2, m_yOrigin + i * m_xSpacing, 0);
+                    }
+
+                    try
+                    {
+                        // Create a line according to the bubble location
+                        if (m_xBubbleLc == BubbleLocation.StartPoint)
+                        {
+                            
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                    if
+                    {
+                        //Create grid with line
+                        try
+                        {
+                            // set the label of first horizontal grid
+                        }
+                        catch
+                        {
+
+                        }
+                    }
+                    else
+                    {
+                        // add the line to curve array
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            // Create grids with curve array
+        }
         #endregion
+
         /* Create Vertical Grids*/
         #region vertical grids
+        private int CreateYGrids(ref ArrayList failurReasons)
+        {
+            // curve array which stores all curves for batch creation
+        }
         #endregion
         #endregion
     }
