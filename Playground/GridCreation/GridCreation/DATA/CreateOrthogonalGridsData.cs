@@ -199,7 +199,7 @@ namespace GridCreation.DATA
 
             for (int i = 0; i < m_xNumber; ++i)
             {
-                XYZ startpt;
+                XYZ srtpt;
                 XYZ endpt;
                 Line line;
 
@@ -208,7 +208,7 @@ namespace GridCreation.DATA
                     if (m_yNumber != 0)
                     {
                         // Grids will have an extension distance of m_ySpaceing /2
-                        startpt = new XYZ(
+                        srtpt = new XYZ(
                             m_xOrigin - m_ySpacing / 2,
                             m_yOrigin + i * m_xSpacing,
                             0);
@@ -219,7 +219,7 @@ namespace GridCreation.DATA
                     }
                     else
                     {
-                        startpt = new XYZ(m_xOrigin, m_yOrigin + i * m_xSpacing, 0);
+                        srtpt = new XYZ(m_xOrigin, m_yOrigin + i * m_xSpacing, 0);
                         endpt = new XYZ(m_xOrigin + m_xSpacing / 2, m_yOrigin + i * m_xSpacing, 0);
                     }
 
@@ -228,19 +228,25 @@ namespace GridCreation.DATA
                         // Create a line according to the bubble location
                         if (m_xBubbleLc == BubbleLocation.StartPoint)
                         {
-                            
+                            line = NewLine(srtpt, endpt);
+                        } else
+                        {
+                            line = NewLine(endpt, srtpt);
                         }
                     }
-                    catch
+                    catch (ArgumentException)
                     {
-
+                        /* res failure */
                     }
-                    if
+                    if (i == 0)
                     {
+                        Grid grid;
                         //Create grid with line
+                        grid = NewGrid(line);
                         try
                         {
                             // set the label of first horizontal grid
+                            grid.Name = m_xFirstLabel
                         }
                         catch
                         {
