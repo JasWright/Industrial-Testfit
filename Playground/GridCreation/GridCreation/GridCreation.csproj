@@ -52,17 +52,42 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Command.cs" />
+    <Compile Include="DATA\CreateGridsData.cs" />
+    <Compile Include="DATA\CreateOrthogonalGridsData.cs" />
+    <Compile Include="DATA\CreateRadialAndArcGridsData.cs" />
+    <Compile Include="DATA\CreateWithSelectedCurvesData.cs" />
+    <Compile Include="UI\CreateOrthogonalGridsForm.xaml.cs">
+      <DependentUpon>CreateOrthogonalGridsForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateRadialAndArcGridsFrom.xaml.cs">
+      <DependentUpon>CreateRadialAndArcGridsFrom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CreateWithSelectedCurvesForm.xaml.cs">
+      <DependentUpon>CreateWithSelectedCurvesForm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UTILS\EnumsAndValues.cs" />
-    <Compile Include="GridCreationOptionData.cs" />
-    <Compile Include="GridCreationOptionForm.xaml.cs">
+    <Compile Include="DATA\GridCreationOptionData.cs" />
+    <Compile Include="UI\GridCreationOptionForm.xaml.cs">
       <DependentUpon>GridCreationOptionForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UTILS\Unit.cs" />
-    <Compile Include="UTILS\Validation.cs" />
+    <Compile Include="UI\Validation.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="GridCreationOptionForm.xaml">
+    <Page Include="UI\CreateOrthogonalGridsForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\CreateRadialAndArcGridsFrom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\CreateWithSelectedCurvesForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\GridCreationOptionForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

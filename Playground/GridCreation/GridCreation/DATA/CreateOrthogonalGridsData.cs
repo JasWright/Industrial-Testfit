@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GridCreation.UTILS
+namespace GridCreation.DATA
 {
-    class Validation
+    class CreateOrthogonalGridsData
     {
     }
 }
