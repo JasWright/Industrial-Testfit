@@ -35,7 +35,14 @@ namespace GridCreation
             {
                 Document doc = commandData.Application.ActiveUIDocument.Document;
 
-                CurveArray selectedCurves = GetSelectedCurves(_doc);
+                CurveArray selectedCurves = GetSelectedCurves(_doc);                     // Get all selected lines and arcs
+
+                GridCreationOptionData gridCreationOption = new GridCreationOptionData(!selectedCurves.IsEmpty);
+                using (GridCreationOptionForm gridCreationOptionForm = new GridCreationOptionForm(gridCreationOption))
+                {
+                    
+                }
+
             }
         }
     }
