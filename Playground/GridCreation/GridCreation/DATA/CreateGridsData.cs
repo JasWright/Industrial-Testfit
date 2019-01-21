@@ -263,19 +263,52 @@ namespace GridCreation.DATA
         #endregion
 
         #region CREATE grid w/ arc
-
+        protected Grid NewGrid(Arc arc)
+        {
+            return Grid.Create(m_rvtDoc, arc);
+        }
         #endregion
 
         #region CREATE linear grid
+        protected Grid CreateLinearGrid(Line line)
+        {
+            return Grid.Create(m_rvtDoc, line);
+        }
+        #endregion
 
+        #region CREATE batch of grids with curves
+        protected void CreateGrids(CurveArray curves)
+        {
+            foreach (Curve c in curves)
+            {
+                Line line = c as Line;
+                Arc arc = c as Arc;
+
+                if (line != null)
+                {
+                    Grid.Create(m_rvtDoc, line);
+                }
+
+                if (arc != null)
+                {
+                    Grid.Create(m_rvtDoc, arc);
+                }
+            }
+        }
         #endregion
 
         #region ADD curve to curve array 
-
+        public static void AddCurveForBatchCreation(ref CurveArray curves, Curve curve)
+        {
+            curves.Append(curve);
+        }
         #endregion
 
         #region SHOW a message box
-
+        public static void ShowMessage(String msg, String caption)
+        {
+            TaskDialog.Show(caption, msg, TaskDialogCommonButtons.Ok);
+        }
         #endregion
 
 
