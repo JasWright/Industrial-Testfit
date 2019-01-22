@@ -1,0 +1,82 @@
+﻿<Application x:Class="IndustrialCreate.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:IndustrialCreate"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!-- Button Resources-->
+        <Style TargetType="Button" x:Key="formsButtonStyle">
+            <!--EventSetter /-->
+            <Setter Property="FontWeight" Value="Black"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <!--Setter Property="Margin" Value="20 0"/-->
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Width" Value="120"/>
+            <Setter Property="Height" Value="35"/>
+            <!--Setter Property="HorizontalAlignment" Value="Right"/-->
+
+        </Style>
+        
+        <!-- ComboBox Resources-->
+        <Style TargetType="ComboBox" x:Key="locationComboBox">
+            <!--EventSetter /-->
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#73d2de"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            
+        </Style>
+        
+        <!-- Label Resources-->
+        <Style TargetType="Label" x:Key="leadingLabelStyle">
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="FontFamily" Value="Karla"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+        <Style TargetType="Label" x:Key="followingLabelStyle" BasedOn="{StaticResource leadingLabelStyle}">
+            
+            
+        </Style>
+
+        <Style TargetType="Label" x:Key="leadingTitleLabelStyle" BasedOn="{StaticResource leadingLabelStyle}">
+            <Setter Property="FontWeight" Value="Thin"/>
+        </Style>
+
+        <!-- TextBox Resources-->
+        <Style TargetType="TextBox" x:Key="numberTextBoxStyle">
+            <!--EventSetter /-->
+           
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Text" Value="0"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+           
+        </Style>
+        <Style TargetType="TextBox" x:Key="labelingTextBoxStyle" BasedOn="{StaticResource numberTextBoxStyle}">
+            
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5 0 5 5"/>
+            <Setter Property="TextAlignment" Value="Left"/>
+        </Style>
+        <!--StatusBar Resources-->
+        <Style TargetType="StatusBar" x:Key="userSubmitStatusBar">
+            <Setter Property="Margin" Value="-10 0 -10 -13"/>
+            <Setter Property="Background" Value="#73d2de"/>
+            
+
+        </Style>
+        <!-- Border Resources-->
+        <Style TargetType="Border" x:Key="borderDiv">
+            <Setter Property="Background" Value="#ffffff"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="#73d2de"/>
+        </Style>
+    </Application.Resources>
+</Application>
