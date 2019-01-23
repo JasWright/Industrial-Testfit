@@ -2,11 +2,12 @@
 Test fit for industrial buildings
 
 
-# The issue
-this takes 18mins!
+# The dynamo issue
+This takes 18mins!
 [![Industrial Building Time Test]](https://vimeo.com/312968327)
+So I am converting all of these scripts to be revit add-ins
 
-Where I am last: Roof auto-generates slope for 4' peak.
+# Where I am last: Roof auto-generates slope for 4' peak.
 Reference-style: 
 ![alt text][logo]
 
